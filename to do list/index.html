@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart To-Do Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>📅 Smart To-Do Planner</h1>
+        <p>Plan, organize, and meet your deadlines</p>
+      </header>
+
+      <section class="task-input">
+        <input
+          type="text"
+          id="task-title"
+          placeholder="Enter task title..."
+          required
+        />
+        <textarea
+          id="task-desc"
+          placeholder="Optional: task details..."
+        ></textarea>
+
+        <div class="deadline-row">
+          <label for="task-date">Deadline:</label>
+          <input type="date" id="task-date" />
+        </div>
+
+        <button id="add-task-btn">Add Task</button>
+      </section>
+
+      <section class="task-section">
+        <h2>Your Tasks</h2>
+        <ul id="task-list"></ul>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

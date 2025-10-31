@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 10px;
+}
+
+.app-container {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  color: #1a73e8;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+header p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Input section */
+.task-input {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+#task-title,
+#task-desc,
+#task-date {
+  border: 1.5px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+
+#task-title:focus,
+#task-desc:focus,
+#task-date:focus {
+  border-color: #1a73e8;
+  outline: none;
+}
+
+.deadline-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+#add-task-btn {
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+#add-task-btn:hover {
+  background: #155ec2;
+}
+
+/* Task list */
+.task-section h2 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+#task-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task {
+  background: #f9fafb;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: background 0.2s;
+}
+
+.task:hover {
+  background: #eef2ff;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-info h3 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.task-info p {
+  color: #555;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.task-info .deadline {
+  font-size: 0.85rem;
+  color: #1a73e8;
+}
+
+.task-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.task-actions button {
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.task-actions button:hover {
+  transform: scale(1.2);
+}
+
+.completed h3,
+.completed p {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.remaining {
+  display: block;
+  margin-top: 5px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.remaining.green {
+  color: #2e7d32;
+}
+
+.remaining.orange {
+  color: #ff9800;
+}
+
+.remaining.red {
+  color: #e53935;
+}
+
